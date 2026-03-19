@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultora Integral | Contabilidad & Seguridad</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://db.onlinewebfonts.com/c/e95895d5113c06f9749d39216a2bd9d3?family=French+Script" rel="stylesheet" type="text/css"/>
+    <link href="https://db.onlinewebfonts.com/c/3f07bb05d3340da1a094dae360e9f7d0?family=Century+Schoolbook+Bold" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+    <nav class="navbar">
+            <div class="logo-container">
+            <div class="logo">Consultora</div>
+            <div class="logo2" >Lamas</div>
+            </div>
+        <div class="burger" id="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#nosotros">Quiénes Somos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+    </nav>
+
+        <header id="home" class="hero-slider">
+        <div class="slider-container" id="slider">
+            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,57,0.5), rgba(0,0,57,0.5)), url('./img/cafa11.png')">
+                <div class="hero-content">
+                    <h1>Consultoría con Raíces</h1>
+                    <p>Asesoramiento integral desde el Norte Argentino.</p>
+                    <a href="#contacto" class="btn-cta">Más Info</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,57,0.5), rgba(0,0,57,0.5)), url('./img/cafa22.png')">
+                <div class="hero-content">
+                    <h1>Gestión Impositiva</h1>
+                    <p>Claridad fiscal para tu tranquilidad.</p>
+                    <a href="#contacto" class="btn-cta">Más Info</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,57,0.5), rgba(0,0,57,0.5)), url('./img/cafa33.png')">
+                <div class="hero-content">
+                    <h1>Seguridad Laboral</h1>
+                    <p>Protegemos lo más importante: tu equipo.</p>
+                    <a href="#contacto" class="btn-cta">Más Info</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,57,0.5), rgba(0,0,57,0.5)), url('./img/cafa44.png')">
+                <div class="hero-content">
+                    <h1>Análisis Económico</h1>
+                    <p>Estrategias sólidas para tiempos de cambio.</p>
+                    <a href="#contacto" class="btn-cta">Más Info</a>
+                </div>
+            </div>
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </header>
+                  
+
+    <section id="nosotros" class="section reveal">
+        <h2>Quiénes Somos</h2>
+        <p>Somos un equipo interdisciplinario dedicado a brindar soluciones estratégicas en el ámbito financiero y de seguridad e higiene. Nuestra misión es optimizar los procesos de nuestros clientes con ética y profesionalismo.</p>
+    </section>
+
+    <section id="servicios" class="section bg-light">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card"><h3>Contaduría</h3><p>Gestión de balances, auditorías y estados contables.</p></div>
+            <div class="service-card"><h3>Economía</h3><p>Análisis de mercado, proyecciones y planes de negocio.</p></div>
+            <div class="service-card"><h3>Impuestos</h3><p>Liquidación impositiva y planificación fiscal estratégica.</p></div>
+            <div class="service-card"><h3>Seguridad e Higiene</h3><p>Prevención de riesgos y cumplimiento de normativa laboral.</p></div>
+        </div>
+    </section>
+
+    <section id="equipo" class="section reveal">
+        <h2>Nuestro Equipo</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="img-circle"></div>
+                <h4>Lic. Juan Pérez</h4>
+                <p>Contador Público</p>
+            </div>
+            <div class="team-card">
+                <div class="img-circle"></div>
+                <h4>Dra. Ana López</h4>
+                <p>Especialista en Impuestos</p>
+            </div>
+            <div class="team-card">
+                <div class="img-circle"></div>
+                <h4>Ing. Carlos Ruíz</h4>
+                <p>Seguridad e Higiene</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section bg-light reveal">
+            <h2>Contacto</h2>
+            <div class="contact-container">
+                <div class="social-side">
+                    <h3>Nuestras Redes</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                        <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="https://wa.me/5493875142057"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+
+                <div class="form-side">
+                    <form>
+                        <input type="text" placeholder="Nombre Completo" required>
+                        <input type="email" placeholder="Correo Electrónico" required>
+                        <textarea placeholder="Tu consulta" rows="4"></textarea>
+                        <button type="submit" class="btn-cta" style="width: 100%;">Enviar Mensaje</button>
+                    </form>
+                </div>
+
+                <div class="map-side">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.262544641974!2d-65.98279502460252!3d-26.070294477156543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941e31cd6499930b%3A0x274b2c888362428a!2sRivadavia%20369%2C%20A4427%20Cafayate%2C%20Salta!5e0!3m2!1ses-419!2sar!4v1700000000000!5m2!1ses-419!2sar" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0; border-radius: 10px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: #7c7b6c;">
+                        <i class="fas fa-map-marker-alt"></i> Rivadavia 369, Cafayate, Salta.
+                    </p>
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer reveal">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#nosotros">Quiénes Somos</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Ubicación</h4>
+                <p>Calle Falsa 123, CP 1000<br>Buenos Aires, Argentina</p>
+            </div>
+            <div class="footer-col">
+                <h4>Atención</h4>
+                <a href="https://wa.me/123456789" class="btn-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+            <div class="footer-col">
+                <h4>Consultora</h4>
+                <p>&copy; 2026 Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
