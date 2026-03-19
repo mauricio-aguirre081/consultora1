@@ -113,6 +113,7 @@ body { line-height: 1.6; color: #3e3e53; }
 .section { padding: 80px 10%; text-align: center; }
 .bg-light { background-color: #f8f69f; }
 h2 { margin-bottom: 30px; color: #000039; }
+.lista {list-style: none;}
 
 /* Servicios Grid */
 .services-grid {
