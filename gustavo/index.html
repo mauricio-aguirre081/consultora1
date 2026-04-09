@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultora Lamas | Contabilidad & Seguridad e Higiene</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://db.onlinewebfonts.com/c/e95895d5113c06f9749d39216a2bd9d3?family=French+Script" rel="stylesheet" type="text/css"/>
     <link href="https://db.onlinewebfonts.com/c/3f07bb05d3340da1a094dae360e9f7d0?family=Century+Schoolbook+Bold" rel="stylesheet" type="text/css"/>
+    
 </head>
 <body>
 
@@ -33,7 +33,16 @@
 
         <header id="home" class="hero-slider">
         <div class="slider-container" id="slider">
-            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,57,0.5), rgba(0,0,57,0.5)), url('./img/cafa11.png')">
+
+            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,57,0.5), rgba(0,0,57,0.5)), url('./img/maparg.png')">
+                <div class="hero-content">
+                    <h1>Trámites en todo el país</h1>
+                    <p>Nuestra presencia en Provincias fundamentales</p>
+                    <a href="#contacto" class="btn-cta">Más Info</a>
+                </div>
+            </div>
+
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,57,0.5), rgba(0,0,57,0.5)), url('./img/cafa11.png')">
                 <div class="hero-content">
                     <h1>Consultoría con Raíces</h1>
                     <p>Asesoramiento integral desde el Norte Argentino.</p>
@@ -61,76 +70,85 @@
                     <a href="#contacto" class="btn-cta">Más Info</a>
                 </div>
             </div>
+            
         </div>
         <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
         <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </header>
                   
-
     <section id="nosotros" class="section reveal">
+    <div class="container">
         <h2>Quiénes Somos</h2>
-        <h3>MISION</h3>
-        <p>Somos una consultora especializada en asesoramiento contable, 
-            societario, financiero e higiene y seguridad, orientado a la empresa, 
-            asociaciones, cooperativas y emprendimientos unipersonales. </p>
-        <p>Brindando soluciones a nuestros clientes en un ambiente profesional, 
-            ofreciéndoles soluciones concretas a sus necesidades. </p>
-        <h3>VISION</h3>
-        <p>Ser una consultora reconocido por la excelencia y calidad en la prestación de servicios, 
-            mediante el asesoramiento integral y personalizado de nuestros clientes. </p>
-        <h3>VALORES</h3>
-        <ul class="lista">
-            <li>Responsabilidad</li>
-            <li>Profesionalismo</li>
-            <li>Vocación de servicio</li>
-            <li>Integridad y Respeto</li>
-            <li>Confidencialidad</li>
-            <li>Relaciones duraderas</li>
-            <li>Atención Personalizada</li>     
-        </ul>
+        <p class="intro-text">En Consultora Lamas, transformamos desafíos en soluciones estratégicas para potenciar el crecimiento de nuestros clientes.</p>
         
-    </section>      
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="about-icon"><i class="fas fa-rocket"></i></div>
+                <h3>Misión</h3>
+                <p>Brindar soluciones concretas en asesoramiento contable, financiero y de seguridad, ofreciendo un ambiente profesional y personalizado.</p>
+            </div>
 
-    <section id="servicios" class="section bg-light">
-        <h2>Nuestros Servicios</h2>
-        <div class="services-grid">
-            <div class="service-card"><h3>CONTABLE y SOCIETARIO</h3>
-                <p>  
-                    <ul class="lista">
-                        <li>Organización, dirección y gestión de Sociedades Comerciales y empresas unipersonales.</li>
-                        <li>Sistemas de registro e información contable.</li>
-                        <li>Informes y tareas de auditoría externa.</li>
-                        <li>Liquidación de Impuestos (Nacionales, provinciales y municipales).</li>
-                        <li>Formación y asesoramiento sobre Asociaciones, Cooperativas y Mutuales.</li>
-                        <li>Asesoramiento sobre contrataciones públicas con el Estado Nacional, Provincial y Municipal.</li>
-                        <li>Asesoramiento como perito en el ámbito judicial.</li>
-                    </ul>
-                </p>
+            <div class="about-card">
+                <div class="about-icon"><i class="fas fa-eye"></i></div>
+                <h3>Visión</h3>
+                <p>Ser reconocidos por la excelencia y calidad, convirtiéndonos en el aliado estratégico integral preferido en la región.</p>
             </div>
-            <div class="service-card"><h3>FINANCIERO</h3>
-                <p>
-                    <ul class="lista">
-                        <li>Inversiones de bajo riesgo y seguras</li>
-                        <li>Inversiones en Acciones y criptomonedas</li>
-                        <li>Perfil de riego</li>
-                        <li>Planificación estratégica</li>
-                    </ul>
-                </p>
-            </div>
-            <div class="service-card"><h3>SEGURIDAD & HIGIENE</h3>
-                <p>
-                    <ul class="lista">
-                        <li>Prevención de accidentes del trabajo.</li>
-                        <li>Análisis de riego de las instalaciones.</li>
-                        <li>Plan de evacuación y de lucha contra el fuego.</li>
-                        <li>Capacitación del personal en materia de higiene y seguridad en el trabajo.</li>
-                        <li>Capacitación sobre el correcto uso y conservación, de máquinas, instalaciones y útiles de trabajo.</li>
-                        <li>Habilitaciones municipales.</li>
-                    </ul>
-                </p>
+
+            <div class="about-card">
+                <div class="about-icon"><i class="fas fa-star"></i></div>
+                <h3>Nuestros Valores</h3>
+                <ul class="values-list">
+                    <li><i class="fas fa-check"></i> Responsabilidad Profesional</li>
+                    <li><i class="fas fa-check"></i> Integridad y Respeto</li>
+                    <li><i class="fas fa-check"></i> Confidencialidad Total</li>
+                    <li><i class="fas fa-check"></i> Atención Personalizada</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<section id="servicios" class="section bg-light">
+    <h2>Nuestros Servicios</h2>
+    <div class="services-grid">
+        <div class="service-card reveal">
+            <div class="icon-container">
+                <i class="fa-solid fa-file-invoice-dollar fa-2x fa-beat-fade"></i>
+            </div>
+            <h3>CONTABLE y SOCIETARIO</h3>
+            <ul class="lista">
+                <li>Organización y gestión de Sociedades.</li>
+                <li>Sistemas de información contable.</li>
+                <li>Liquidación de Impuestos.</li>
+                <li>Asesoramiento judicial.</li>
+            </ul>
+        </div>
+        <div class="service-card reveal">
+            <div class="icon-container">
+                <i class="fa-solid fa-chart-line fa-2x fa-bounce"></i>
+            </div>
+            <h3>FINANCIERO</h3>
+            <ul class="lista">
+                <li>Organización y gestión de Sociedades.</li>
+                <li>Sistemas de información contable.</li>
+                <li>Liquidación de Impuestos.</li>
+                <li>Asesoramiento judicial.</li>
+            </ul>
+        </div>
+        <div class="service-card reveal">
+            <div class="icon-container">
+                <i class="fa-solid fa-shield-halved fa-2x fa-flip"></i>
+            </div>
+            <h3>SEGURIDAD & HIGIENE</h3>
+            <ul class="lista">
+                <li>Organización y gestión de Sociedades.</li>
+                <li>Sistemas de información contable.</li>
+                <li>Liquidación de Impuestos.</li>
+                <li>Asesoramiento judicial.</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
     <section id="equipo" class="section reveal">
         <h2>Nuestro Equipo de Trabajo</h2>
@@ -229,6 +247,14 @@
             </div>
         </div>
     </footer>
+
+    <a href="https://wa.me/5493868463752?text=Hola%20Consultora,%20necesito%20asesoramiento." class="btn-whatsapp-fixed btn-wa-fix-2" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://wa.me/5493863573007?text=Hola%20Consultora,%20necesito%20asesoramiento." class="btn-whatsapp-fixed btn-wa-fix-1" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
 
     <script src="./js/script.js"></script>
 </body>
