@@ -86,8 +86,8 @@ body {
 }
 
 .btn-cta:hover {
-    background-color: transparent;
-    color: var(--p-fondo);
+    background-color: var(--p-oscuro); /* Cambia a azul oscuro */
+    color: var(--p-fondo); /* Letras amarillitas */
     border: 2px solid var(--p-fondo);
     transform: scale(1.05);
 }
@@ -218,7 +218,7 @@ form input, form textarea {
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
 .footer-col a { color: var(--p-claro); text-decoration: none; }
 
-/* --- BOTONES FLOTANTES --- */
+/* --- BOTONES DE WHATSAPP (Sin sombra/línea blanca) --- */
 .btn-whatsapp-fixed {
     position: fixed;
     right: 20px;
@@ -232,10 +232,112 @@ form input, form textarea {
     justify-content: center;
     z-index: 1000;
     transition: 0.3s;
+    box-shadow: none; /* Quitamos cualquier línea o sombra */
+    border: none;
+    text-decoration: none !important;
+    border-bottom: none !important;
 }
 .btn-wa-fix-1 { bottom: 20px; background-color: #25d366; }
 .btn-wa-fix-2 { bottom: 90px; background-color: #128c7e; }
 .btn-whatsapp-fixed:hover { transform: scale(1.1); }
+
+/* --- BARRA LATERAL REDES SOCIALES --- */
+.social-sidebar {
+    position: fixed;
+    left: 15px;
+    top: 35%; /* La ponemos arriba de la flecha del slider */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1100; /* Por encima de casi todo */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.sidebar-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--p-oscuro);
+    color: var(--p-fondo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.2rem;
+}
+
+.sidebar-icon:hover {
+    background-color: var(--p-claro);
+    color: var(--p-oscuro);
+    transform: translateX(5px);
+}
+
+.sidebar-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* --- ESTILO SOFISTICADO CARDS NOSOTROS --- */
+.about-card {
+    border: 1px solid rgba(0,0,57,0.1); /* Borde fino y elegante */
+    border-top: 5px solid var(--p-claro);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el botón al fondo */
+    min-height: 400px;
+}
+
+.btn-info-nosotros {
+    margin-top: 20px;
+    padding: 8px 20px;
+    border: 1px solid var(--p-oscuro);
+    color: var(--p-oscuro);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.btn-info-nosotros:hover {
+    background-color: var(--p-oscuro);
+    color: var(--p-fondo);
+}
+
+/* --- ESTILO ELEGANTE CARDS EQUIPO --- */
+.team-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-card:hover {
+    border: 1px solid var(--p-claro);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.btn-info-equipo {
+    margin-top: 25px; /* Espacio para que no toque el texto */
+    padding: 10px 25px;
+    background-color: var(--p-oscuro);
+    color: var(--p-fondo);
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    transition: 0.4s;
+}
+
+.btn-info-equipo:hover {
+    background-color: var(--p-claro);
+    color: var(--p-oscuro);
+    letter-spacing: 1px;
+}
 
 /* --- ANIMACIONES REVEAL --- */
 .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
@@ -243,20 +345,85 @@ form input, form textarea {
 
 /* --- RESPONSIVE --- */
 @media (max-width: 992px) {
+    .social-sidebar { display: none; } /* En móviles mejor ocultarla */
     .burger { display: block; cursor: pointer; }
     .burger div { width: 25px; height: 3px; background: var(--p-fondo); margin: 5px; transition: 0.3s; }
     
-    .nav-links {
-        position: fixed; right: 0; top: 60px; height: 0; width: 100%;
-        background: var(--p-oscuro); flex-direction: column; overflow: hidden; transition: 0.5s;
-    }
-    .nav-links.nav-active { height: 300px; padding: 20px 0; }
+ 
+    /* El menú desplegado */
+.nav-links {
+    position: fixed;
+    right: 0;
+    top: 60px; /* Se queda debajo de la barra azul */
+    height: 350px; /* El alto que te gustaba antes */
+    width: 100%;
+    background: var(--p-oscuro);
+    flex-direction: column;
     
-    .contact-container { grid-template-columns: 1fr; }
-    .hero-content h1 { font-size: 2rem; }
+    /* ESTO ES LO IMPORTANTE PARA LA DISTRIBUCIÓN */
+    justify-content: space-evenly; /* Distribuye los links con espacio igual entre ellos */
+    align-items: center;
+    
+    padding: 20px 0;
+    transform: translateY(-150%); /* Lo escondemos arriba */
+    transition: 0.5s ease-in-out;
+    z-index: 999;
 }
 
-/* Animación Hamburguesa */
-.toggle .line1 { transform: rotate(-45deg) translate(-5px, 6px); }
-.toggle .line2 { opacity: 0; }
-.toggle .line3 { transform: rotate(45deg) translate(-5px, -6px); }
+/* Cuando el menú se abre */
+.nav-links.nav-active {
+    transform: translateY(0); /* Baja a su posición */
+}
+
+/* --- LÓGICA DE LOS ICONOS (Hamburguesa y X) --- */
+.burger {
+    cursor: pointer;
+    color: var(--p-fondo);
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+/* Por defecto, la X está escondida */
+.burger .icon-close {
+    display: none;
+}
+
+/* Cuando el menú está abierto (clase .toggle) */
+.burger.toggle .icon-bars {
+    display: none; /* Se esconden las rayitas */
+}
+
+.burger.toggle .icon-close {
+    display: block; /* Aparece la X */
+}
+
+
+
+/* Control de los iconos Bars y X */
+.burger { z-index: 1001; cursor: pointer; color: var(--p-fondo); font-size: 1.8rem; }
+.burger .icon-close { display: none; } /* La X está escondida al principio */
+.toggle .icon-bars { display: none; } /* Las barritas se esconden al abrir */
+.toggle .icon-close { display: block; position: fixed; top: 20px; right: 20px; } /* La X aparece arriba a la derecha */
+
+    .contact-container { grid-template-columns: 1fr; }
+}
+
+.btn-info-servicios {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: var(--p-oscuro);
+    color: var(--p-fondo);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-info-servicios:hover {
+    background: var(--p-claro);
+    color: var(--p-oscuro);
+}

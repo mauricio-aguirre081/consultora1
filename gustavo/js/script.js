@@ -3,20 +3,41 @@ document.addEventListener('DOMContentLoaded', () => {
     const burger = document.getElementById('burger');
     const nav = document.getElementById('navLinks');
 
-    if (burger) {
-        burger.addEventListener('click', () => {
-            nav.classList.toggle('nav-active');
-            burger.classList.toggle('toggle');
-        });
-    }
 
-    // Cerrar el menú al hacer clic en un link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('nav-active');
-            burger.classList.remove('toggle');
-        });
+
+    if (burger) {
+    burger.addEventListener('click', () => {
+        // Abre o cierra el menú
+        nav.classList.toggle('nav-active');
+        
+        // Cambia entre las rayitas y la X
+        burger.classList.toggle('toggle');
     });
+}
+
+// Cerramos el menú si el usuario hace clic en una opción
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+    });
+});
+
+
+
+
+// Cerrar el menú al hacer clic en un link (añadimos que devuelva el scroll a la normalidad)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('nav-active');
+        burger.classList.remove('toggle');
+        document.body.style.overflow = 'auto';
+    });
+});
+
+
+
+
 
     // --- Slider Hero ---
     let currentSlide = 0;
@@ -57,4 +78,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+// Lógica para ocultar la barra lateral al llegar al contacto/footer
+    const sidebar = document.getElementById('socialSidebar');
+    const contacto = document.getElementById('contacto');
+
+    window.addEventListener('scroll', () => {
+        if (!sidebar || !contacto) return;
+
+        const contactoTop = contacto.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        // Si el inicio de la sección contacto llega a verse en pantalla
+        if (contactoTop < screenHeight - 100) {
+            sidebar.classList.add('sidebar-hidden');
+        } else {
+            sidebar.classList.remove('sidebar-hidden');
+        }
+    });
+
+
 });
