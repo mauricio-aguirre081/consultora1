@@ -194,6 +194,54 @@ h2 { margin-bottom: 30px; color: var(--p-oscuro); font-size: 2.5rem; }
 
 .lista li::before { content: "•"; font-weight: bold; }
 
+
+
+/* Modificamos la estructura de la card */
+.about-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,57,0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(0,0,57,0.1);
+    border-top: 5px solid var(--p-claro);
+    min-height: 420px; /* Ajustamos un poquito el alto */
+    justify-content: flex-start; /* Alineamos todo hacia arriba */
+}
+
+/* Forzamos que el contenedor del icono siempre ocupe lo mismo */
+.about-icon {
+    font-size: 2.5rem;
+    color: var(--p-oscuro);
+    margin-bottom: 20px;
+    height: 80px; /* Alto fijo para el contenedor del icono */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo para los h3 para asegurar consistencia */
+.about-card h3 {
+    margin-bottom: 20px;
+    height: 50px; /* Alto fijo para el título */
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* Para que el texto de abajo no quede pegado al título si es muy corto */
+.about-card p, .values-list {
+    margin-top: 10px;
+}
+
+
+
+
+
+
 /* --- EQUIPO --- */
 .team-grid {
     display: flex;
@@ -219,14 +267,23 @@ h2 { margin-bottom: 30px; color: var(--p-oscuro); font-size: 2.5rem; }
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
+/* --- EQUIPO (AJUSTADO) --- */
 .img-circle {
-    width: 120px;
-    height: 120px;
-    background-color: var(--p-gris);
+    width: 140px; /* Un poco más grande para que luzca mejor */
+    height: 140px;
     border-radius: 50%;
     margin: 0 auto 15px;
-    background-image: url('https://picsum.photos/200'); 
-    background-size: cover;
+    overflow: hidden; /* CRUCIAL: Recorta todo lo que salga del círculo */
+    border: 3px solid var(--p-claro); /* Opcional: un borde para resaltar */
+    background-color: var(--p-gris); /* Color de fondo mientras carga */
+}
+
+.img-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción y rellena el círculo */
+    object-position: center top; /* Ajusta la posición para que no se corte la cabeza */
+    display: block;
 }
 
 /* --- CONTACTO --- */
@@ -417,4 +474,270 @@ form input, form textarea {
 
     /* Contacto en columna en móvil */
     .contact-container { grid-template-columns: 1fr; }
+}
+
+
+/*  Servicios detalle */
+
+/* --- ESTILOS PÁGINA DETALLE DE SERVICIOS --- */
+
+.container-servicios {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-hero {
+    height: 45vh;
+    background: linear-gradient(rgba(0,0,57,0.85), rgba(0,0,57,0.85)), url('../img/servicios-bg.jpg'); /* Asegúrate de tener esta imagen */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.service-detail-section {
+    padding: 100px 10%;
+}
+
+.service-header {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.icon-main {
+    font-size: 4rem;
+    color: var(--p-claro);
+    margin-bottom: 20px;
+}
+
+.service-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.item-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--p-oscuro);
+    transition: all 0.3s ease;
+}
+
+.item-card:hover {
+    transform: translateX(10px);
+    border-left-color: var(--p-claro);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.item-card i {
+    font-size: 1.6rem;
+    color: var(--p-claro);
+    min-width: 40px;
+    text-align: center;
+}
+
+.item-card p {
+    font-size: 1rem;
+    color: var(--p-medio);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* BOTONES CTA */
+.cta-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.btn-cta-services {
+    display: inline-block;
+    padding: 16px 45px;
+    background-color: var(--p-oscuro);
+    color: var(--p-fondo);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    border: 2px solid var(--p-oscuro);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+}
+
+.btn-cta-services:hover {
+    background-color: transparent;
+    color: var(--p-oscuro);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,57,0.15);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .service-detail-section { padding: 80px 5%; }
+}
+
+@media (max-width: 768px) {
+    .services-hero h1 { font-size: 2.5rem; }
+    
+    .service-items-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-cta-services {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .item-card:hover {
+        transform: none; /* Evitamos desplazamiento lateral en móvil */
+    }
+}
+
+
+/* ESTILOS PROFESIONALES */
+
+/* --- ESTILOS DE PERFIL PROFESIONAL --- */
+.container-profile {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.profile-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.profile-frame {
+    width: 100%;
+    aspect-ratio: 1 / 1.2;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.05);
+}
+
+.main-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-tag {
+    color: var(--p-claro);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.job-title {
+    color: var(--p-gris);
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.profile-desc {
+    font-size: 1.1rem;
+    color: var(--p-medio);
+    margin-bottom: 30px;
+}
+
+.profile-expertise h4 {
+    margin-bottom: 15px;
+    color: var(--p-oscuro);
+}
+
+.profile-expertise ul {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.profile-expertise li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-expertise li i {
+    color: var(--p-claro);
+}
+
+.profile-socials {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile-socials a {
+    font-size: 1.5rem;
+    color: var(--p-oscuro);
+    transition: 0.3s;
+}
+
+.profile-socials a:hover {
+    color: var(--p-claro);
+    transform: scale(1.2);
+}
+
+/* GALERÍA DE TRABAJO */
+.work-gallery {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* RESPONSIVE PERFILES */
+@media (max-width: 768px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .profile-image-side {
+        order: 1;
+    }
+
+    .profile-info-side {
+        order: 2;
+    }
+
+    .profile-expertise li {
+        justify-content: center;
+    }
+    
+    .profile-section {
+        padding: 50px 0;
+    }
 }
